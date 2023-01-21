@@ -1,13 +1,16 @@
 @import "./utils/vars";
+@import "./utils/breakpoints";
+@import "./utils/placeholders";
 @import "./base/base";
 @import "./base/reset";
 @import "./components/header";
+@import './components/menu-container';
 @import "./components/logo";
 @import "./components/navigation";
 @import "./components/hero";
 @import "./components/menu-contacts";
 @import "./components/benefits";
-@import "./components/work";
+@import "./components/services";
 @import "./components/team";
 @import "./components/icons";
 @import "./components/clients";
@@ -16,10 +19,7 @@
 @import "./components/join-us";
 @import "./components/subscription";
 @import "./components/modal";
-@import "./components/form";
 @import "./components/buttons";
-@import "./components/label";
 
-@import "./components/portfolio-section";
-@import "./components/portfolio-filters";
 @import "./components/projects-section";
+@import "./components/portfolio-filters";

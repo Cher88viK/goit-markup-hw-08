@@ -1,15 +1,22 @@
-.footer-section {
+.page-footer {
   padding-top: 60px;
   padding-bottom: 60px;
   background-color: var(--hero-background-color);
 
   &__container {
-    display: flex;
-    align-items: baseline;
-    gap: 70px;
-    padding: 0 15px;
-    margin-left: auto;
-    margin-right: auto;
-    width: 1200px;
+    @extend %container;
+    text-align: center;
+
+    @media screen and(min-width: $tablet) {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: baseline;
+    }
+
+    @media screen and (min-width: $desktop) {
+      justify-content: space-between;
+      text-align: start;
+    }
   }
 }

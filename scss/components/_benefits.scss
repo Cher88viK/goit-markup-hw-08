@@ -1,50 +1,80 @@
 .benefits {
-  padding-top: 94px;
+  @extend %section;
 
-  &__container {
-    padding: 0 15px;
-    margin-left: auto;
-    margin-right: auto;
-    width: 1200px;
+  @media screen and(min-width:$desktop) {
+    padding-bottom: 0;
   }
 
   &__list {
-    display: flex;
-    gap: 30px;
-    padding-bottom: 0px;
-    list-style-type: none;
+    @extend %list;
+    @extend %container;
+    display: block;
+
+    @media screen and (min-width: $tablet) {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+    }
+
+    @media screen and (min-width: $desktop) {
+      align-items: start;
+      flex-wrap: nowrap;
+    }
+  }
+
+  &__item {
+    margin-bottom: 30px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    @media screen and (min-width: $tablet) {
+      width: 354px;
+      margin-bottom: 0;
+    }
+
+    @media screen and (min-width: $desktop) {
+      width: 270px;
+    }
   }
 
   &__icons-container {
+    // width: 100%;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 30px;
-    background: var(--border-header-color);
+    background-color: var(--section--three-color);
     border-radius: 4px;
-    width: 270px;
+
     height: 120px;
+    margin-bottom: 30px;
   }
 
   &__icon {
-    display: flex;
-    justify-content: center;
+    margin: auto;
+    width: 70px;
+    height: 70px;
   }
 
   &__title {
-    color: var(--title-text-color);
-    font-weight: 700;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 10px;
     font-size: 14px;
     line-height: 1.14;
     text-transform: uppercase;
-    margin-bottom: 10px;
+    letter-spacing: 0.03em;
+    color: var(--title-text-color);
+    @media screen and (min-width: $tablet) {
+      text-align: left;
+    }
   }
 
   &__text {
+    margin-top: 0;
+    margin-bottom: 0;
     color: var(--primary-text-color);
-    letter-spacing: 0.03em;
     font-size: 14px;
     line-height: 1.71;
-    margin-bottom: 0;
+    letter-spacing: 0.03em;
   }
 }

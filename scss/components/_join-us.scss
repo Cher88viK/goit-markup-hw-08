@@ -1,11 +1,17 @@
-.join-us {
-  margin-top: 0;
-  margin-bottom: 20px;
+.join {
+  @media screen and (min-width: $desktop) {
+    display: flex;
+    flex-direction: column;
+    margin-right: 94px;
+  }
 
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 1.14;
-  text-transform: uppercase;
-
-  color: var(--hero-title-color);
+  &__text {
+    text-transform: uppercase;
+    color: var(--hero-title-color);
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    margin-bottom: 20px;
+  }
 }
