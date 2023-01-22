@@ -5,8 +5,4 @@ body {
   &.modal-open {
     overflow: hidden;
   }
-
-  @media screen and (max-width: $tablet) {
-    padding-top: 60px;
-  }
 }
